@@ -1,0 +1,17 @@
+/* -------------Логотип------------- */
+.logo {
+  color: $ColorAccent;
+  font-family: Raleway, sans;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  &--accent {
+  color: $ColorTitleText;
+  }
+
+  &--accent-footer {
+  color: $ColorAccentWhite;
+  }
+}

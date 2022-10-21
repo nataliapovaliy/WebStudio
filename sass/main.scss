@@ -1,0 +1,19 @@
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './base/common';
+@import './layouts/header';
+@import './components/logo';
+
+@import './layouts/hero';
+@import './components/btn';
+@import './layouts/benefits';
+@import './layouts/work';
+@import './layouts/team';
+@import './components/social';
+@import './layouts/customers';
+@import './layouts/footer';
+
+@import './layouts/portfolio';
+
+@import './layouts/modal';

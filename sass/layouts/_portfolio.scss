@@ -1,0 +1,123 @@
+/* -------------portfolio.html------------- */
+
+.portfolio-section {
+  padding-top: $SizePadding;
+  padding-bottom: $SizePadding;
+  background-color: $ColorBgPrimery;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-bottom: 34px;
+
+  & .item + .item {
+    margin-left: 8px;
+  }
+}
+
+.filters__btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: $ColorTitleText;
+  background-color: $ColorBtnPortfolio;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+
+  &--primery {
+    color: $ColorAccentWhite;
+    background-color: $ColorAccent;
+  }
+
+  &:hover,
+  &:focus {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: $ColorAccentWhite;
+    background-color: $ColorAccent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio__link {
+  text-decoration: none;
+  margin-bottom: 0;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  & img {
+    display: block;
+  }
+}
+
+.portfolio__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__wrap-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+
+  .portfolio__link:hover & {
+    transform: translateY(0%);
+  }
+}
+
+.portfolio__box {
+  margin-top: 0;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.portfolio__title {
+  margin: 0;
+  margin-bottom: 4px;
+  color: $ColorTitleText;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.portfolio__text {
+  margin: 0;
+  color: $ColorPrimeryText;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}

@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primery-bg-color);
+  color: var(--primery-text-color);
+  font-family: $MainFont, $FontFamily;
+  letter-spacing: 0.03em;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: $mainWidth;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+}
+
+.section {
+  margin-top: 0;
+  padding-bottom: $SizePadding;
+}

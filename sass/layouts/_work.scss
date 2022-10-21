@@ -1,0 +1,38 @@
+/* -------------section Work------------- */
+.section-work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .item + .item {
+  margin-left: 30px;
+  }
+}
+
+.section-work__card {
+  position: relative;
+}
+
+.section-work__img {
+  display: block;
+  margin: 0;
+}
+
+.section-work__box {
+  display: flex;
+  width: 370px;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: $ColorWorkBox;
+  position: absolute;
+  bottom: 0;
+}
+.section-work__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $ColorAccentWhite;
+}

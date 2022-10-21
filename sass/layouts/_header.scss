@@ -1,0 +1,90 @@
+/* -------------HEADER------------- */
+header {
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+
+/* -------------Main nav------------- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* -------------Site nav------------- */
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav__item {
+  position: relative;
+  .site-nav & + & {
+  margin-left: 50px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+    &--current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    }
+
+    &:hover,
+    &:focus {
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--accent-color);
+    }
+}
+
+/* -------------kontact-nav------------- */
+.kontact-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.kontact-nav .kontact-nav__item + .kontact-nav__item {
+  margin-left: 50px;
+}
+
+.kontact-nav__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.kontact-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primery-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--accent-color);
+  }
+}
+
