@@ -1,18 +1,28 @@
 /* -------------Переваги section benefits------------- */
 
-.section__box {
-  padding-top: $SizePadding;
-}
+// .section__box {
+//   padding-top: $SizePadding;
+// }
 .section__list {
   display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .section__item {
-  width: 270px;
-  .section__list & + & {
-  margin-left: 30px;
-}
+  // width: 270px;
+  width: 100%;
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+
+//   .section__list & + & {
+//   margin-left: 30px;
+// }
 }
 
 .section__icon {

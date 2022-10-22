@@ -38,6 +38,12 @@ body {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -50,12 +56,39 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .section {
   margin-top: 0;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
 }
-
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+  }
+}
+.section--box {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section--box {
+    padding-top: 94px;
+  }
+}
 /* -------------HEADER------------- */
 header {
   height: 80px;
@@ -160,7 +193,6 @@ header {
 
 /* -------------hero------------- */
 .hero {
-  max-width: 1600px;
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -204,20 +236,25 @@ header {
 }
 
 /* -------------Переваги section benefits------------- */
-.section__box {
-  padding-top: 94px;
-}
-
 .section__list {
   display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .section__item {
-  width: 270px;
+  width: 100%;
 }
-.section__list .section__item + .section__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .section__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .section__icon {
