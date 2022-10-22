@@ -47,9 +47,12 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.container--hero {
+  padding-left: 0;
+  padding-right: 0;
 }
 .container--box {
   display: flex;
@@ -89,6 +92,22 @@ img {
     padding-top: 94px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .section--work {
+    display: none;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 /* -------------HEADER------------- */
 header {
   height: 80px;
@@ -193,9 +212,9 @@ header {
 
 /* -------------hero------------- */
 .hero {
+  width: 100%;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 60px;
   background-color: var(--footer-bg-color);
   text-align: center;
   flex-grow: 1;
@@ -204,26 +223,41 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 
 /* -------------button------------- */
 .button {
   display: inline-block;
   border-radius: 4px;
-  padding: 10px 32px;
+  padding: 10px 24px;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: #fff;
@@ -234,6 +268,11 @@ header {
   letter-spacing: 0.06em;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .button {
+    padding: 10px 32px;
+  }
+}
 
 /* -------------Переваги section benefits------------- */
 .section__list {
@@ -243,25 +282,22 @@ header {
   justify-content: center;
 }
 
-.section__item {
+.card-benefits {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .section__item {
+  .card-benefits {
     width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  .section__item {
+  .card-benefits {
     width: calc((100% - 90px) / 4);
   }
 }
 
-.section__icon {
+.card-benefits__box-icon {
   display: flex;
-}
-.section__icon--box {
-  /* display: flex; */
   height: 120px;
   align-items: center;
   justify-content: center;
@@ -270,7 +306,12 @@ header {
   margin-bottom: 30px;
 }
 
-.section__subtitle {
+.card-benefits__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.card-benefits__title {
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -280,22 +321,12 @@ header {
   text-transform: uppercase;
 }
 
-.section__text {
+.card-benefits__text {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-}
-
-.section__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
 }
 
 /* -------------section Work------------- */
@@ -339,22 +370,40 @@ header {
 
 /* -------------section-team------------- */
 .section-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--section-bg-color);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-team__list {
   display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .section-team__card {
-  width: 270px;
+  width: 100%;
   background: var(--accent-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .section-team__card {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-team__card {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .section-team__box {

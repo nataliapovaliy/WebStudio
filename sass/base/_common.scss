@@ -32,9 +32,14 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: $mainWidth;
+  // width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+
+  &--hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &--box {
     display: flex;
@@ -42,13 +47,13 @@ img {
     justify-content: flex-start;
     }
   
-  @media screen and(min-width: 480px) {
+  @include mobil {
     width: 480px;
   }
-  @media screen and(min-width: 768px) {
+  @include tablet {
     width: 768px;
   }
-   @media screen and(min-width: 1200px) {
+  @include desktop {
     width: 1200px;
   }
 }
@@ -58,20 +63,31 @@ img {
   // padding-bottom: 94px;
   padding-bottom: 60px;
 
-  @media screen and(min-width: 1200px) {
+  @include desktop {
     padding-bottom: 94px;
   }
 
   &--box {
   // padding-top: 94px;
     padding-top: 60px;
-    @media screen and(min-width: 1200px) {
+    @include desktop {
       padding-top: 94px;
     }
   }
 
   &--work {
-    @media screen and(max-width: 1199px)
-    display: none;
+    @media screen and(max-width: 1199px) {
+      display: none;
+    }
   }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }

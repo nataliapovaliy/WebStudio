@@ -2,9 +2,9 @@
 
 .hero {
   // max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 60px;
   background-color: var(--footer-bg-color);
   text-align: center;
   flex-grow: 1;
@@ -16,18 +16,30 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }  
 }
 
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  @include font(900, 26px, 1.62, 0.06em);
+  
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-text-color);
+ 
+  @include desktop {
+    width: 696px;
+    @include font(900, 44px, 1.36, 0.06em);
+
+  }
 }

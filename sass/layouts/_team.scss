@@ -1,22 +1,39 @@
 /* -------------section-team------------- */
 .section-team {
-  padding-top: $SizePadding;
-  padding-bottom: $SizePadding;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--section-bg-color);
   text-align: center;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
 }
 
 .section-team__list {
   display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .section-team__card {
-  width: 270px;
+  width: 100%;
+  // width: 270px;
   background: var(--accent-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+  
 }
 
 .section-team__box {
