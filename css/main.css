@@ -100,12 +100,20 @@ img {
 
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 /* -------------HEADER------------- */
@@ -408,24 +416,29 @@ header {
 
 .section-team__box {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .section-team__box {
+    padding-bottom: 30px;
+  }
 }
 
 .section-team__title {
   margin: 0;
-  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  color: var(--title-text-color);
 }
 
 .section-team__text {
   margin: 0;
   margin-top: 10px;
-  color: var(--primery-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
+  color: var(--primery-text-color);
 }
 
 /* -------------social------------- */
