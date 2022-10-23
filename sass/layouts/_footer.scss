@@ -6,21 +6,46 @@
 }
 
 .section-footer__list {
+  flex-direction: column;
+  align-items: center;
   display: flex;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   gap: 70px;
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
-// .logo--accent-footer {
-//   color: var(--accent-text-color);
-// }
+.footer-kontact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 
 .footer-kontact__list {
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+
+  }
 }
 
 .footer-kontact__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-kontact__link {
@@ -43,34 +68,61 @@
   }
 }
 
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+
+  }
+}
+
 .footer-social__title {
+  margin: 0;
   padding-bottom: 20px;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--accent-text-color);
+  
 }
 
-// .social__link--accent {
-//   background-color: var(--icon-transparency-color);
-//   color: var(--accent-bg-color);
-// }
-
-// .social__link--accent:hover,
-// .social__link--accent:focus {
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//   background-color: var(--accent-color);
-// }
+.footer-kontact + .footer-social {
+  @include tablet {
+    display: flex;
+    // gap: 165px;
+  }
+}
 
 .footer-subs {
-  margin-left: 23px;
+  // margin-left: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    display: flex;
+    margin-left: 23px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .footer-subs__box {
   display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+  flex-direction: row;
   gap: 12px;
+  align-items: flex-start;
+  }
 }
 
 .footer-subs__input {

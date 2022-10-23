@@ -7,10 +7,11 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: $ColorAccentWhite;
   background-color: $ColorAccent;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 1.875, 0.06em);
+  // font-weight: 700;
+  // font-size: 16px;
+  // line-height: 1.875;
+  // letter-spacing: 0.06em;
   cursor: pointer;
 
   @include desktop {

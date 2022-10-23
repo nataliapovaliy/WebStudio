@@ -4,6 +4,10 @@
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
+
+  &--footer {
+    margin-top: 0;
+  }
 }
 
 .social__item {

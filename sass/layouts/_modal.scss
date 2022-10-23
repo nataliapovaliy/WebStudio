@@ -23,8 +23,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   padding: 40px;
   background: var(--accent-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -36,6 +36,11 @@
 
   .backdrop.is-hidden & {
   transform: translate(-50%, -50%) scale(0.9) rotate(50deg);
+  }
+
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -68,11 +73,15 @@
 
 .modal__title {
   margin: 0;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 1.5, null);
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: 1.15;
   text-align: center;
   color: var(--title-text-color);
+  @include desktop {
+    @include font(700, 20px, 1.15, null);
+  }
 }
 
 .modal__form {
@@ -81,10 +90,11 @@
 }
 
 .modal__label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(400, 12px, 1.17, 0.01em);
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
   color: var(--primery-text-color);
   position: relative;
 }
@@ -97,13 +107,16 @@
 
 .modal__input {
   box-sizing: border-box;
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline-color: transparent;
   color: var(--primery-text-color);
+  @include desktop {
+    width: 448px;
+  }
 
   &:hover,
   &:focus {
@@ -129,11 +142,15 @@
   }
 
   &::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include font(400, 14px, 1.17, 0.01em);
+    // font-weight: 400;
+    // font-size: 12px;
+    // line-height: 1.17;
+    // letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+    @include desktop {
+      @include font(400, 12px, 1.17, 0.01em);
+    }
   }
 }
 
@@ -169,10 +186,14 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 25px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  @include font(400, 12px, 1.17, null);
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.7;
   color: var(--primery-text-color);
+  @include desktop {
+    @include font(400, 14px, 1.7, null);
+  }
 }
 
 .modal-chekbox__input {

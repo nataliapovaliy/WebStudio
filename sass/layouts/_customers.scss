@@ -3,11 +3,23 @@
 .customer__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .customer__card {
-  width: 170px;
+  // width: 210px;
   height: 92px;
+  width: calc((100% - 30px) / 2);
+  // border: 1px solid #afb1b8;
+  // border-radius: 4px;
+  @include tablet {
+    // width: 226px;
+    width: calc((100% - 60px) / 3);
+  }
+  @include desktop {
+    // width: 170px;
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .customer__link {
@@ -28,7 +40,8 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
-  border-color: inherit;
+  // border-color: inherit;
+  border-color: var(--accent-color);
   }
 }
 
