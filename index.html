@@ -20,7 +20,7 @@
   </head>
   <body>
     <!------------- Меню сайта HEADER ------------->
-    <!-- <header>
+    <header>
       <div class="container container--box">
         <nav class="main-nav">
           <a class="logo" href="./index.html" lang="en"
@@ -61,8 +61,96 @@
             >
           </li>
         </ul>
+
+        <!------------- Меню mobal ------------->
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-close-black"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a
+                  class="mob-menu__link link mob-menu__link--current"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-connect">
+            <div class="mob-connect__list">
+              <p class="mob-connect__list-top">
+                <a class="mob-connect__tel link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </p>
+              <a
+                class="mob-connect__email link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </div>
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!------------- Герой ------------->
@@ -694,5 +782,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
