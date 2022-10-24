@@ -11,9 +11,22 @@
   display: flex;
   // justify-content: flex-start;
   gap: 70px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    display: flex;
+    gap: 70px;
+  }
+
   @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -93,7 +106,7 @@
 .footer-kontact + .footer-social {
   @include tablet {
     display: flex;
-    // gap: 165px;
+    
   }
 }
 
