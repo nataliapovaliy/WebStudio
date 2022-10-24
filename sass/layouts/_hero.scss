@@ -1,25 +1,40 @@
 /* -------------hero------------- */
 
 .hero {
-  // max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: 118px 60px;
   background-color: var(--footer-bg-color);
   text-align: center;
   flex-grow: 1;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/img-logo.jpg");
+  background-image: $bgLinearGradient,
+    url("../images/mobil/img-logo.jpg");
+  @include retina {
+    background-image: $bgLinearGradient,
+    url("../images/mobil/img-logo-2x.jpg");
+  }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @include tablet {
+    background-image: $bgLinearGradient,
+    url("../images/tablet/img-logo.jpg");
+  @include retina {
+    background-image: $bgLinearGradient,
+    url("../images/tablet/img-logo-2x.jpg");
+  }
+  }
   @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: $bgLinearGradient,
+      url("../images/img-logo.jpg")
+    @include retina {
+      background-image: $bgLinearGradient,
+        url("../images/img-logo-2x.jpg");
+    }
   }  
+
 }
 
 .hero__title {
@@ -29,10 +44,6 @@
   margin-right: auto;
   @include font(900, 26px, 1.62, 0.06em);
   
-  // font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.36;
-  // letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-text-color);

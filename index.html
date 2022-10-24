@@ -133,7 +133,7 @@
             <div class="item section-work__card">
               <img
                 class="section-work__img"
-                src="./images/img.jpg"
+                srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x"
                 alt="Розробка програмного забезпечення"
                 width="370"
               />
@@ -145,7 +145,7 @@
             <div class="item section-work__card">
               <img
                 class="section-work__img"
-                src="./images/img-1.jpg"
+                srcset="./images/img-1.jpg 1x, ./images/img-1-2x.jpg 2x"
                 alt="Тестування мобільного додатку"
                 width="370"
               />
@@ -157,7 +157,7 @@
             <div class="item section-work__card">
               <img
                 class="section-work__img"
-                src="./images/img-2.jpg"
+                srcset="./images/img-2.jpg 1x, ./images/img-2-2x.jpg 2x"
                 alt="Робота з палітрою кольорів"
                 width="370"
               />
@@ -174,7 +174,28 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="list section-team__list">
             <li class="section-team__card">
-              <img src="./images/img-3.jpg" alt="Ігор Дем'яненко" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img-3.jpg 1x, ./images/img-3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/img-3-tablet.jpg    1x,
+                    ./images/tablet/img-3-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobil/img-3-mob.jpg    1x,
+                    ./images/mobil/img-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/img-3.jpg" alt="Ігор Дем'яненко" />
+              </picture>
+
               <div class="section-team__box">
                 <h3 class="section-team__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="section-team__text">Product Designer</p>
@@ -222,7 +243,28 @@
             </li>
 
             <li class="section-team__card">
-              <img src="./images/img-4.jpg" alt="Ольга Рєпіна" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img-4.jpg 1x, ./images/img-4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/img-4-tablet.jpg    1x,
+                    ./images/tablet/img-4-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobil/img-4-mob.jpg    1x,
+                    ./images/mobil/img-4-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/img-4.jpg" alt="Ольга Рєпіна" />
+              </picture>
+
               <div class="section-team__box">
                 <h3 class="section-team__title">Ольга Рєпіна</h3>
                 <p lang="en" class="section-team__text">Frontend Developer</p>
@@ -270,7 +312,27 @@
             </li>
 
             <li class="section-team__card">
-              <img src="./images/img-5.jpg" alt="Микола Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img-5.jpg 1x, ./images/img-5-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/img-5-tablet.jpg    1x,
+                    ./images/tablet/img-5-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobil/img-5-mob.jpg    1x,
+                    ./images/mobil/img-5-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/img-5.jpg" alt="Микола Тарасов" />
+              </picture>
               <div class="section-team__box">
                 <h3 class="section-team__title">Микола Тарасов</h3>
                 <p lang="en" class="section-team__text">Marketing</p>
@@ -318,7 +380,27 @@
             </li>
 
             <li class="section-team__card">
-              <img src="./images/img-6.jpg" alt="Михайло Єрмаков" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img-6.jpg 1x, ./images/img-6-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/img-6-tablet.jpg    1x,
+                    ./images/tablet/img-6-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobil/img-6-mob.jpg    1x,
+                    ./images/mobil/img-6-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/img-6.jpg" alt="Михайло Єрмаков" />
+              </picture>
               <div class="section-team__box">
                 <h3 class="section-team__title">Михайло Єрмаков</h3>
                 <p lang="en" class="section-team__text">UI Designer</p>
