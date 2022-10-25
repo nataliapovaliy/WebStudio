@@ -378,7 +378,8 @@ header {
 .hero {
   width: 100%;
   margin: 0 auto;
-  padding: 118px 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--footer-bg-color);
   text-align: center;
   flex-grow: 1;

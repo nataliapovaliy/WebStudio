@@ -3,7 +3,9 @@
 .hero {
   width: 100%;
   margin: 0 auto;
-  padding: 118px 60px;
+  // padding: 118px 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--footer-bg-color);
   text-align: center;
   flex-grow: 1;
@@ -47,6 +49,12 @@
   text-align: center;
   color: var(--accent-text-color);
  
+  // @include mobil {
+  //   width: 360px;
+  // }
+  // @include tablet {
+  //   width: 360px;
+  // }
   @include desktop {
     width: 696px;
     @include font(900, 44px, 1.36, 0.06em);
