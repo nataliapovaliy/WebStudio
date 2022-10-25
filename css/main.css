@@ -66,6 +66,7 @@ img {
 @media screen and (max-width: 767px) {
   .container--box {
     padding-top: 10px;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 480px) {
@@ -319,6 +320,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-left: 96px;
   }
 }
 @media screen and (min-width: 1200px) {
