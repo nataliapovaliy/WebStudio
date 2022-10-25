@@ -48,6 +48,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @media screen and(max-width: 767px) {
+      padding-top: 10px;
+    }
     }
   
   @include mobil {

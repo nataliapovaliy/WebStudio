@@ -21,7 +21,7 @@ header {
   display: block;
   margin-left: auto;
   svg {
-    fill: #ffffff;
+    fill: var(--title-text-color);
   }
 }
 
@@ -30,7 +30,9 @@ header {
     display: none;
   }
   position: fixed;
+  // top: 10px;
   top: 0;
+  right: 10px;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
@@ -38,11 +40,19 @@ header {
   padding-top: 48px;
   padding-bottom: 48px;
   overflow: auto;
+  // svg {
+  //   color: var(--title-text-color);
+  // }
   > .container {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+  }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 

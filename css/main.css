@@ -63,6 +63,11 @@ img {
   align-items: center;
   justify-content: flex-start;
 }
+@media screen and (max-width: 767px) {
+  .container--box {
+    padding-top: 10px;
+  }
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -146,12 +151,13 @@ header {
   }
 }
 .menu-open svg {
-  fill: #ffffff;
+  fill: var(--title-text-color);
 }
 
 .mob-menu {
   position: fixed;
   top: 0;
+  right: 10px;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
@@ -170,6 +176,11 @@ header {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+}
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .menu-close {
